@@ -10,7 +10,7 @@ st.markdown("""
     .st-emotion-cache-6q9sum.ef3psqc4{
         visibility:hidden;
     }
-    .viewerBadge_container__r5tak.styles_viewerBadge__CvC9N{
+    .styles_streamlitAppContainer__w82h8.styles_stateContainer__CelYF.a{
         visibility:hidden; 
     }
 
