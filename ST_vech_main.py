@@ -4,7 +4,7 @@ st.markdown("""
 
 <style>
 
-    .stActionButton{
+    #stActionButton{
         visibility:none;
     
     }
