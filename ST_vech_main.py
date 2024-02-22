@@ -41,8 +41,16 @@ def calculate_maintenance_status(user_name, vehicle_type, subtype, current_kilom
         return f"Hi {user_name}, based on the maintenance intervals for this type of vehicle, maintenance is not needed."
 
 def main():
-    # Hide Streamlit footer and header
-    st.set_page_config(layout="wide", initial_sidebar_state="collapsed", page_title="Vehicle Maintenance Checker", page_icon=":car:")
+    # Custom CSS to hide Streamlit footer and header
+    hide_streamlit_style = """
+        <style>
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        </style>
+        """
+
+    # Display the custom CSS
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
     # Input user's name
     user_name = st.text_input("Enter your name:")
