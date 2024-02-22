@@ -4,7 +4,7 @@ st.markdown("""
 
 <style>
 
-    #stActionButton{
+    .st-emotion-cache-zq-95wmm ezrtsby0{
         visibility:none;
     
     }
