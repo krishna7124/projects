@@ -10,7 +10,9 @@ st.markdown("""
     .st-emotion-cache-6q9sum.ef3psqc4{
         visibility:hidden;
     }
-    
+    .viewerBadge_container__r5tak.styles_viewerBadge__CvC9N{
+        visibility:hidden; 
+    }
 
 </style>
 
