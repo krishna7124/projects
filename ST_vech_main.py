@@ -12,7 +12,7 @@ st.markdown("""
 
 </style>
 
-""")
+""", unsafe_allow_html=True)
 
 NUM_VEHICLE_TYPES = 5
 NUM_SUBTYPES_PER_TYPE = 3
