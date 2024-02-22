@@ -5,7 +5,7 @@ st.markdown("""
 <style>
 
     .st-emotion-cache-zq-95wmm ezrtsby0{
-        visibility:none;
+        visibility:hidden;
     
     }
     
