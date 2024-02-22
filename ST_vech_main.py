@@ -5,8 +5,10 @@ st.markdown("""
 <style>
 
     .st-emotion-cache-ch5dnh.ef3psqc5{
+        visibility:hidden; 
+    }
+    .st-emotion-cache-6q9sum.ef3psqc4{
         visibility:hidden;
-    
     }
     
 
