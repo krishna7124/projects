@@ -1,5 +1,12 @@
 import streamlit as st
 
+st.beta_set_page_config(
+    page_title="Your App Title",  # Set your app title here
+    page_icon=None,  # Remove the Streamlit page icon
+    layout="wide",  # Set the layout of your app ("wide" or "centered")
+    initial_sidebar_state="expanded"  # Set the initial state of the sidebar ("expanded" or "collapsed")
+)
+
 NUM_VEHICLE_TYPES = 5
 NUM_SUBTYPES_PER_TYPE = 3
 
