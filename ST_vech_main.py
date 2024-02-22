@@ -27,7 +27,7 @@ MAINTENANCE_INTERVALS = [
     [160000, 800000, 1600000]  # Plane
 ]
 
-def calculate_maintenance_status(vehicle_type, subtype, current_kilometers, last_kilometers):
+def calculate_maintenance_status(user_name, vehicle_type, subtype, current_kilometers, last_kilometers):
     if current_kilometers < last_kilometers:
         return "Error: Current kilometers cannot be less than last recorded kilometers."
 
@@ -36,12 +36,16 @@ def calculate_maintenance_status(vehicle_type, subtype, current_kilometers, last
     maintenance_interval = MAINTENANCE_INTERVALS[VEHICLE_TYPES.index(vehicle_type)][SUBTYPE_NAMES[VEHICLE_TYPES.index(vehicle_type)].index(subtype)]
 
     if kilometers_since_last_maintenance >= maintenance_interval:
-        return "Maintenance is required."
+        return f"Hi {user_name}, based on the maintenance intervals for this type of vehicle, it is time for maintenance."
     else:
-        return "No maintenance is required."
+        return f"Hi {user_name}, based on the maintenance intervals for this type of vehicle, maintenance is not needed."
 
 def main():
-    st.title("Vehicle Maintenance Checker")
+    # Hide Streamlit footer and header
+    st.set_page_config(layout="wide", initial_sidebar_state="collapsed", page_title="Vehicle Maintenance Checker", page_icon=":car:")
+
+    # Input user's name
+    user_name = st.text_input("Enter your name:")
 
     # Input vehicle type
     vehicle_type = st.selectbox("Select the type of vehicle:", VEHICLE_TYPES)
@@ -54,8 +58,8 @@ def main():
     last_kilometers = st.number_input(f"Enter the last recorded kilometers of the {subtype} {vehicle_type}:")
 
     # Show result on submit
-    if st.button("Check Maintenance"):
-        result = calculate_maintenance_status(vehicle_type, subtype, current_kilometers, last_kilometers)
+    if st.button("Submit"):
+        result = calculate_maintenance_status(user_name, vehicle_type, subtype, current_kilometers, last_kilometers)
         st.write(result)
 
 if __name__ == "__main__":
