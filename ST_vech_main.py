@@ -1,5 +1,19 @@
 import streamlit as st
 
+st.markdown("""
+
+<style?
+
+    .stActionButton{
+        visibility:none;
+    
+    }
+    
+
+</style>
+
+""")
+
 NUM_VEHICLE_TYPES = 5
 NUM_SUBTYPES_PER_TYPE = 3
 
